@@ -1,231 +1,396 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jay Shri Shyam Stone Arts | Premium Temple Architecture & Sandstone Elevation</title>
+    <title>Shri Shyam Stone Arts | Modern Architectural & Stone Crafts</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-<meta name="google-site-verification" content="Ze33wJvoefWq8eTwHa0Y1VM4B-TNGGF6EfCYMsnUz3w" />
-
         :root {
-            --primary: #2a150c;
-            --primary-light: #3d1f12;
-            --accent: #d4af37;
-            --accent-light: #f4e0c1;
-            --bg-body: #fdfbf7;
-            --card-bg: #ffffff;
-            --text-dark: #221510;
-            --text-muted: #665b55;
+            --bg-main: #0B0F17;
+            --bg-card: rgba(23, 31, 46, 0.75);
+            --primary-glow: #3B82F6;
+            --accent: #60A5FA;
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+            --border-glow: rgba(255, 255, 255, 0.12);
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
-        body { background-color: var(--bg-body); color: var(--text-dark); line-height: 1.6; }
-        
-        /* Navigation Header */
-        header { background: linear-gradient(135deg, #180a05, var(--primary)); color: #fff; padding: 15px 20px; position: sticky; top: 0; z-index: 1000; border-bottom: 3px solid var(--accent); box-shadow: 0 4px 12px rgba(0,0,0,0.4); text-align: center; }
-        .header-title { font-size: 24px; font-weight: 800; color: var(--accent-light); letter-spacing: 1.8px; text-transform: uppercase; }
-        .header-sub { font-size: 13px; color: #d0c0b0; margin-top: 2px; font-weight: 500; }
-        .lang-btn { background: var(--accent); color: var(--primary); border: none; padding: 6px 18px; font-weight: bold; border-radius: 20px; margin-top: 8px; cursor: pointer; font-size: 12px; }
-        
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Glassmorphism Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(11, 15, 23, 0.88);
+            backdrop-filter: blur(18px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-glow);
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #FFFFFF, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #2563EB, #3B82F6);
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.7);
+        }
+
         /* Hero Section */
-        .hero { background: linear-gradient(135deg, rgba(42,21,12,0.95) 0%, rgba(61,31,18,0.95) 100%); color: white; padding: 55px 20px; text-align: center; border-bottom: 4px solid var(--accent); }
-        .hero h1 { font-size: 28px; margin-bottom: 12px; color: var(--accent-light); font-weight: 700; }
-        .hero p { font-size: 15px; margin-bottom: 22px; color: #e6dad0; max-width: 850px; margin-left: auto; margin-right: auto; line-height: 1.7; }
-        
-        .btn-group { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-        .btn { padding: 12px 26px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 14px; display: inline-flex; align-items: center; gap: 8px; transition: 0.2s; }
-        .btn-wa { background-color: #25D366; color: white; box-shadow: 0 4px 12px rgba(37,211,102,0.3); }
-        .btn-call { background-color: var(--accent); color: var(--primary); box-shadow: 0 4px 12px rgba(212,175,55,0.3); }
-        
-        .container { max-width: 1150px; margin: 40px auto; padding: 0 18px; }
-        .section-title { text-align: center; font-size: 24px; color: var(--primary); margin-bottom: 30px; position: relative; font-weight: 800; letter-spacing: 0.5px; }
-        .section-title::after { content: ''; width: 70px; height: 3.5px; background: var(--accent); position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%); }
-        
-        /* Leadership Team Section */
-        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-bottom: 50px; }
-        .team-card { background: var(--card-bg); border-radius: 14px; padding: 25px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.06); border: 2px solid #e8dfd1; }
-        .team-photo { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin: 0 auto 15px; border: 4px solid var(--accent); box-shadow: 0 5px 15px rgba(0,0,0,0.18); background: var(--primary); color: var(--accent-light); display: flex; align-items: center; justify-content: center; font-size: 36px; font-weight: bold; }
-        .team-card h3 { color: var(--primary); font-size: 21px; margin-bottom: 4px; }
-        .team-card .role { color: #b8860b; font-weight: bold; font-size: 13px; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.5px; }
-        .team-card .qualification { background: #fdf6e7; color: #8a6d3b; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 12px; display: inline-block; margin-bottom: 12px; border: 1px solid #f0e3c4; }
-        .team-card p { font-size: 13.5px; color: var(--text-muted); margin-bottom: 15px; line-height: 1.6; text-align: justify; }
-        .team-btn { display: inline-block; background: var(--primary); color: var(--accent-light); padding: 9px 20px; border-radius: 20px; text-decoration: none; font-size: 13px; font-weight: bold; }
-        
-        /* Work Gallery Section */
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 50px; }
-        .gallery-card { background: var(--card-bg); border-radius: 14px; overflow: hidden; box-shadow: 0 5px 18px rgba(0,0,0,0.07); border: 1px solid #e8dfd1; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s; }
-        .gallery-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
-        .gallery-img-box { width: 100%; height: 240px; background: var(--primary); overflow: hidden; position: relative; }
-        .gallery-img-box img { width: 100%; height: 100%; object-fit: cover; }
-        .project-tag { position: absolute; top: 12px; left: 12px; background: rgba(42,21,12,0.85); color: var(--accent-light); font-size: 11px; padding: 4px 10px; border-radius: 10px; font-weight: bold; border: 1px solid var(--accent); }
-        
-        .gallery-info { padding: 18px; display: flex; flex-direction: column; flex-grow: 1; }
-        .gallery-info h3 { font-size: 17px; color: var(--primary); margin-bottom: 8px; font-weight: 700; }
-        .gallery-info .details { font-size: 13px; color: var(--text-muted); margin-bottom: 15px; flex-grow: 1; line-height: 1.6; }
-        .gallery-info .specs { font-size: 12px; color: #7f6e65; background: #f9f5f0; padding: 8px 10px; border-radius: 6px; margin-bottom: 15px; border-left: 3px solid var(--accent); }
-        .gallery-btn { display: block; text-align: center; background: #25D366; color: #fff; padding: 10px; border-radius: 8px; text-decoration: none; font-size: 13px; font-weight: bold; }
-        
-        /* Information Sections */
-        .info-box { background: var(--card-bg); padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); margin-bottom: 30px; border-left: 5px solid var(--accent); border: 1px solid #eee; border-left-width: 5px; }
-        .info-box h3 { color: var(--primary); margin-bottom: 12px; font-size: 19px; }
-        .info-box ul { list-style-position: inside; margin-top: 8px; }
-        .info-box li { margin-bottom: 10px; font-size: 14px; color: #444; }
-        
-        /* Contact Footer Box */
-        .contact-card { background: linear-gradient(135deg, #1f0a04, var(--primary)); color: white; padding: 35px 20px; border-radius: 16px; text-align: center; border: 2px solid var(--accent); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
-        .contact-card h3 { color: var(--accent-light); margin-bottom: 15px; font-size: 22px; }
-        .contact-details p { margin: 8px 0; font-size: 15px; color: #e6dad0; }
-        .contact-details a { color: var(--accent-light); text-decoration: none; font-weight: bold; }
-        
-        footer { text-align: center; padding: 22px; background: #120603; color: #888; font-size: 12px; margin-top: 45px; border-top: 1px solid #2a150c; }
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 140px 20px 60px;
+            position: relative;
+            background: radial-gradient(circle at 50% 20%, rgba(37, 99, 235, 0.18), transparent 60%);
+        }
+
+        .badge {
+            background: rgba(59, 130, 246, 0.12);
+            color: var(--accent);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.4rem, 6vw, 4.2rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(90deg, #60A5FA, #A78BFA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 680px;
+            margin: 0 auto 35px;
+        }
+
+        /* Stats Grid */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item h3 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .stat-item p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            padding: 70px 20px 35px;
+        }
+
+        .section-title h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.3rem;
+            margin-bottom: 8px;
+        }
+
+        /* Portfolio Cards Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 25px;
+            padding: 0 8% 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: 20px;
+            overflow: hidden;
+            backdrop-filter: blur(12px);
+            transition: all 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(96, 165, 250, 0.45);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border-glow);
+        }
+
+        .card-body {
+            padding: 22px;
+        }
+
+        .card-body h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .card-body p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Leadership / CEO Section */
+        .team-grid {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            flex-wrap: wrap;
+            padding: 0 8% 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: 22px;
+            padding: 35px 25px;
+            text-align: center;
+            width: 320px;
+            backdrop-filter: blur(12px);
+            transition: all 0.3s ease;
+        }
+
+        .team-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-6px);
+        }
+
+        .team-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 3px solid var(--accent);
+            box-shadow: 0 0 20px rgba(96, 165, 250, 0.35);
+        }
+
+        .team-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .team-card .role {
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .team-card p {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45);
+            z-index: 1000;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border-glow);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="header-title">JAY SHRI SHYAM STONE ARTS</div>
-        <div class="header-sub" id="header-sub">जय श्री श्याम स्टोन आर्ट्स — प्राकृतिक पत्थर नक्काशी, मंदिर निर्माण एवं शाही एलिवेशन</div>
-        <button class="lang-btn" onclick="toggleLanguage()">Switch to English / हिंदी में देखें</button>
-    </header>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Shri Shyam Stone Arts</div>
+        <a href="https://wa.me/91XXXXXXXXXX" class="btn-primary"><i class="fa-brands fa-whatsapp"></i> Direct Connect</a>
+    </nav>
 
+    <!-- Hero Section -->
     <section class="hero">
-        <h1 id="hero-title">शाही राजस्थान सैंडस्टोन नक्काशी एवं प्राकृतिक पत्थर एलिवेशन</h1>
-        <p id="hero-desc">15+ वर्षों की उत्कृष्टता — बंसी पहाड़पुर (पिंक सैंडस्टोन), जोधपुर पिंक एवं धौलपुर पत्थरों द्वारा भव्य मंदिर निर्माण, पारंपरिक एवं आधुनिक कोठी एलिवेशन, बारीक नक्काशीदार खंभे, झरोखे, छतरियां एवं सीएनसी स्टोन जाली वर्क। ऑल-इंडिया सप्लाई एवं साइट इंस्टालेशन।</p>
-        <div class="btn-group">
-            <a href="https://wa.me/916375161370" class="btn btn-wa" id="btn-wa">Direct WhatsApp Inquiry</a>
-            <a href="tel:6375161370" class="btn btn-call" id="btn-call">Call CEO: 6375161370</a>
+        <div>
+            <span class="badge">✨ Premium Stone Architecture & CNC Artistry</span>
+            <h1>Crafting Timeless <span>Stone Luxury</span> & Architectural Excellence</h1>
+            <p>Master stone artisans producing high-precision marble temples, CNC 3D stone wall panels, luxury fountains, and bespoke stone artifacts.</p>
+            <a href="https://wa.me/91XXXXXXXXXX" class="btn-primary" style="padding: 16px 36px; font-size: 1.05rem;">Explore Portfolio <i class="fa-solid fa-arrow-right"></i></a>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Handcrafted & Precision CNC</p>
+                </div>
+                <div class="stat-item">
+                    <h3>4.9 ★</h3>
+                    <p>Client Satisfaction</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <div class="container">
-        
-        <!-- Leadership Profiles -->
-        <h2 class="section-title" id="title-team">कंपनी नेतृत्व (Company Leadership)</h2>
-        <div class="team-grid">
-            
-            <div class="team-card">
-                <img src="ceo.jpg.jpg" alt="Dinesh Saini" class="team-photo" onerror="this.src='ceo.jpg'; this.onerror=function(){this.outerHTML='<div class=\'team-photo\'>DS</div>'}">
-                <h3>दिनेश सैनी (Dinesh Saini)</h3>
-                <div class="role">मुख्य कार्यकारी अधिकारी (CEO)</div>
-                <div class="qualification">15+ Years Stone Architecture Experience</div>
-                <p>दिनेश सैनी जी के मार्गदर्शन में पिछले 15 से अधिक वर्षों से भारतभर में भव्य मंदिरों, नक्काशीदार पिलर, झरोखे और प्रीमियम सैंडस्टोन एलिवेशन का कार्य पूर्ण गुणवत्ता और समय पर पूरा किया जा रहा है।</p>
-                <a href="tel:6375161370" class="team-btn">संपर्क करें: 6375161370</a>
-            </div>
-
-            <div class="team-card">
-                <img src="director.jpg.jpg" alt="Sameer Saini" class="team-photo" onerror="this.src='director.jpg'; this.onerror=function(){this.outerHTML='<div class=\'team-photo\'>SS</div>'}">
-                <h3>समीर सैनी (Sameer Saini)</h3>
-                <div class="role">निदेशक (Director)</div>
-                <div class="qualification">B.Tech (Noida) | Polytechnic (Jaipur) | High Coding & Tech Skills</div>
-                <p>समीर सैनी आधुनिक इंजीनियरिंग और पारंपरिक स्टोन कार्विंग का बेहतरीन तालमेल बिठाते हैं। जयपुर से पॉलीटेक्निक और नोएडा से B.Tech पासआउट समीर जी को 3D CAD डिज़ाइनिंग, modern structural elevation, coding और high-tech project execution में महारत हासिल है।</p>
-                <a href="tel:7014467721" class="team-btn">संपर्क करें: 7014467721</a>
-            </div>
-
-        </div>
-
-        <!-- 15 Detailed Projects Gallery -->
-        <h2 class="section-title" id="title-gallery">हमारे प्रमुख कार्य एवं प्रोजेक्ट्स (Our Master Work Gallery)</h2>
-        <div class="gallery-grid">
-            
-            <script>
-                // Detailed custom descriptions for all 15 work photos
-                const projectDetails = [
-                    { title: "भव्य राजस्थान सैंडस्टोन मंदिर", desc: "बंसी पहाड़पुर गुलाबी पत्थर से तैयार किया गया बारीक हस्त-नक्काशीदार मंदिर शिखर और मण्डप वर्क।", specs: "मटीरियल: बंसी पहाड़पुर | नक्काशी: हस्त-निर्मित" },
-                    { title: "शाही कोठी फ्रंट एलिवेशन", desc: "जोधपुर पिंक सैंडस्टोन द्वारा पारंपरिक राजपूताना और मॉडर्न आर्किटेक्चर का बेजोड़ संगम।", specs: "मटीरियल: जोधपुर पिंक | फिनिश: नेचुरल टेक्सचर" },
-                    { title: "नक्काशीदार सैंडस्टोन खंभे (Pillars)", desc: "हॉल एवं मेन गेट प्रवेश द्वार हेतु भारी नक्काशीदार रॉयल पिलर और बारीक ब्रैकेट वर्क।", specs: "मटीरियल: धौलपुर / बंसी पहाड़पुर | यूसेज: पिलर्स" },
-                    { title: "बारीक नक्काशीदार स्टोन जाली", desc: "बालकनी और वेंटिलेशन हेतु सीएनसी एवं हस्त-निर्मित बारीक जाली वर्क जो घर को शाही लुक देता है।", specs: "मटीरियल: धौलपुर सैंडस्टोन | टाइप: CNC & Hand Cut" },
-                    { title: "राजस्थानी झरोखा एवं छतरी", desc: "विला और हेरिटेज होटल्स के लिए नक्काशीदार झरोखा डिज़ाइन जो हेरिटेज सुंदरता बढ़ाता है।", specs: "मटीरियल: जोधपुर रेड/पिंक | स्टाइल: राजस्थानी" },
-                    { title: "मंदिर गर्भगृह एवं देव मूर्ति कार्य", desc: "मकराना मार्बल और सैंडस्टोन से निर्मित गर्भगृह नक्काशी और सुंदर नक्काशीदार नक्काशी।", specs: "मटीरियल: मकराना मार्बल / सैंडस्टोन" },
-                    { title: "मॉडर्न विला वॉल क्लैडिंग", desc: "प्राकृतिक पत्थर की सैंडस्टोन क्लैडिंग जो दीवार को नमी, बारिश और धूप से जीवनभर बचाती है।", specs: "मटीरियल: धौलपुर बीज | फीचर: वेदरप्रूफ" },
-                    { title: "मेन गेट स्टोन आर्किटेक्चर", desc: "प्रवेश द्वार के लिए भारी नक्काशीदार द्वार स्तंभ और शाही तोरण द्वार फ्रेमिंग।", specs: "मटीरियल: बंसी पहाड़पुर सैंडस्टोन" },
-                    { title: "बालकनी स्टोन रेलिंग एवं पिलर", desc: "छत और बालकनी की सुरक्षा हेतु टिकाऊ और सुंदर नक्काशीदार पत्थर रेलिंग।", specs: "मटीरियल: जोधपुर पिंक सैंडस्टोन" },
-                    { title: "हेरिटेज होटल एवं रिॉर्ट प्रोजेक्ट", desc: "कमर्शियल और हेरिटेज प्रोजेक्ट्स के लिए बड़े पैमाने पर सैंडस्टोन स्ट्रक्चरल नक्काशी।", specs: "मटीरियल: ऑल वैरायटी सैंडस्टोन" },
-                    { title: "3D सीएनसी डिज़ाइनर वॉल पैनल", desc: "मॉडर्न इंटीरियर और एक्सटीरियर दीवारों के लिए 3D कटिंग सैंडस्टोन आर्ट पैनल।", specs: "मटीरियल: धौलपुर / जोधपुर सैंडस्टोन" },
-                    { title: "शास्त्रीय मंदिर सभा मण्डप", desc: "श्रद्धालुओं के बैठने हेतु बड़े पिलर्स और बीम पर आधारित बारीक नक्काशीदार मंडप।", specs: "मटीरियल: बंसी पहाड़पुर सैंडस्टोन" },
-                    { title: "गार्डन एवं लैंडस्केप स्टोन आर्ट", desc: "पार्क, फार्महाउस और गार्डन के लिए प्राकृतिक पत्थर के फव्वारे और बैठने की छतरियां।", specs: "मटीरियल: नेचुरल सैंडस्टोन" },
-                    { title: "बाउंड्री वॉल सैंडस्टोन क्लैडिंग", desc: "घर की बाहरी दीवारों को जीवनभर मजबूत और सुंदर बनाए रखने वाली स्टोन क्लैडिंग।", specs: "मटीरियल: धौलपुर बीज / पिंक" },
-                    { title: "कस्टम ऑर्डर सैंडस्टोन क्राफ्ट", desc: "ग्राहक की पसंद और 3D डिज़ाइन के अनुसार विशेष रूप से तैयार की गई प्राकृतिक पत्थर क्राफ्ट।", specs: "मटीरियल: कस्टम चॉइस सैंडस्टोन" }
-                ];
-
-                for (let i = 1; i <= 15; i++) {
-                    const project = projectDetails[i-1];
-                    document.write(`
-                        <div class="gallery-card">
-                            <div class="gallery-img-box">
-                                <span class="project-tag">Project #${i}</span>
-                                <img src="work${i}.jpg.jpg" alt="${project.title}" onerror="this.src='work${i}.jpg'">
-                            </div>
-                            <div class="gallery-info">
-                                <h3>${project.title}</h3>
-                                <p class="details">${project.desc}</p>
-                                <div class="specs">${project.specs}</div>
-                                <a href="https://wa.me/916375161370?text=I%20want%20inquiry%20for%20Project%20Photo%20${i}%20(${encodeURIComponent(project.title)})" class="gallery-btn">फोटो एवं रेट जानें (WhatsApp)</a>
-                            </div>
-                        </div>
-                    `);
-                }
-            </script>
-
-        </div>
-
-        <!-- Material Details Section -->
-        <div class="info-box">
-            <h3>हमारे पास उपलब्ध प्रीमियम सैंडस्टोन एवं पत्थर (Stone Types)</h3>
-            <ul>
-                <li><strong>बंसी पहाड़पुर सैंडस्टोन (Bansi Paharpur Pink Stone):</strong> विश्व प्रसिद्ध गुलाबी पत्थर जिसका उपयोग भव्य राम मंदिर अयोध्या एवं प्राचीन शाही महलों में हुआ है।</li>
-                <li><strong>जोधपुर पिंक एवं रेड पत्थर (Jodhpur Pink Stone):</strong> अत्यधिक टिकाऊ, सुंदर प्राकृतिक टेक्सचर - पिलर, झरोखे और कोठी के फ्रंट एलिवेशन के लिए सबसे लोकप्रिय।</li>
-                <li><strong>धौलपुर सैंडस्टोन (Dholpur Beige / Pink):</strong> वाटरप्रूफ प्राकृतिक पत्थर - बारीक जाली काम, बाउंड्री वॉल एवं क्लैडिंग के लिए सर्वोत्कृष्ट।</li>
-                <li><strong>मकराना मार्बल एवं ग्रेनाइट:</strong> मंदिर गर्भगृह, देव मूर्तियाँ, कटनी मार्बल एवं प्रीमियम ग्रेनाइट वर्क।</li>
-            </ul>
-        </div>
-
-        <!-- Why Choose Us -->
-        <div class="info-box">
-            <h3>क्यों चुनें जय श्री श्याम स्टोन आर्ट्स? (Why Choose Us)</h3>
-            <ul>
-                <li><strong>15+ वर्षों का अनुभव:</strong> अनुभवी कारीगरों और नक्काशीकारों द्वारा 100% शुद्ध और बारीक कलाकृति।</li>
-                <li><strong>इंजीनियरिंग + पारंपरिक कला:</strong> B.Tech & Polytechnic क्वालिफाइड टीम द्वारा सटीक 3D डिज़ाइन और स्ट्रक्चरल मजबूती।</li>
-                <li><strong>ऑल इंडिया डिलीवरी एवं फिटिंग:</strong> भारत के हर राज्य में सुरक्षित ट्रांसपोर्टेशन एवं कुशल कारीगरों द्वारा साइट पर परफेक्ट फिटिंग।</li>
-                <li><strong>डायरेक्ट फ़ैक्टरी रेट:</strong> बिना किसी बिचौलिए के सही दाम और उच्चतम सैंडस्टोन क्वालिटी की गारंटी।</li>
-            </ul>
-        </div>
-
-        <!-- Contact Section -->
-        <div class="contact-card">
-            <h3>संपर्क करें एवं Direct ऑर्डर दें (Contact Us)</h3>
-            <div class="contact-details">
-                <p>📍 <strong>मुख्य कार्यालय:</strong> लोहरदगा, रांची (झारखंड) — [ऑल इंडिया डिलीवरी एवं सर्विस उपलब्ध]</p>
-                <p>✉️ <strong>ईमेल:</strong> shrishyamstone1436@gmail.com</p>
-                <br>
-                <p>📞 <strong>दिनेश सैनी (CEO):</strong> <a href="tel:6375161370">6375161370</a></p>
-                <p>📞 <strong>समीर सैनी (Director):</strong> <a href="tel:7014467721">7014467721</a> (B.Tech / Tech Head)</p>
-                <br>
-                <a href="https://wa.me/916375161370" class="btn btn-wa">Direct WhatsApp पर मैसेज भेजें</a>
-            </div>
-        </div>
-
+    <!-- Leadership Section -->
+    <div class="section-title">
+        <h2>Leadership & Visionaries</h2>
+        <p style="color: var(--text-muted);">The driving minds behind Shri Shyam Stone Arts.</p>
     </div>
 
-    <footer>
-        © Jay Shri Shyam Stone Arts. All Rights Reserved. | Designed with Engineering Excellence & Traditional Artistry.
-    </footer>
+    <section class="team-grid">
+        <div class="team-card">
+            <img src="ceo.jpg" alt="CEO Director" class="team-img" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80'">
+            <h3>Managing Director</h3>
+            <div class="role">Chief Executive Officer</div>
+            <p>Leading structural stone innovations and high-end architectural carving projects across India.</p>
+        </div>
+        <div class="team-card">
+            <img src="director.jpg" alt="Co-Director" class="team-img" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80'">
+            <h3>Co-Director</h3>
+            <div class="role">Head of Operations & Design</div>
+            <p>Specializing in 3D CNC stone mapping, client customization, and luxury interior stone cladding.</p>
+        </div>
+    </section>
 
-    <script>
-        let isHindi = true;
-        function toggleLanguage() {
-            if(isHindi) {
-                document.getElementById('header-sub').innerText = "Jay Shri Shyam Stone Arts - Sandstone Carving & Temple Architecture";
-                document.getElementById('hero-title').innerText = "Royal Sandstone Architecture & Exterior Cladding";
-                document.getElementById('hero-desc').innerText = "15+ Years of Excellence in Bansi Paharpur, Jodhpur & Dholpur Sandstone Work. Specialized in Temple Construction, House Facades, Carved Pillars, Jharokhas & CNC Stone Jali across India.";
-                document.getElementById('btn-wa').innerText = "Direct WhatsApp Inquiry";
-                document.getElementById('btn-call').innerText = "Call CEO: 6375161370";
-                document.getElementById('title-team').innerText = "Company Leadership";
-                document.getElementById('title-gallery').innerText = "Our Master Work Gallery (15 Projects)";
-                isHindi = false;
-            } else {
-                location.reload();
-            }
-        }
-    </script>
+    <!-- Portfolio Projects Grid -->
+    <div class="section-title">
+        <h2>Our Architectural Portfolio</h2>
+        <p style="color: var(--text-muted);">Real handcrafted stone marvels & high-end architectural designs.</p>
+    </div>
+
+    <section class="grid">
+        <div class="card">
+            <img src="temple1.jpg" alt="Stone Temple Work" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80'">
+            <div class="card-body">
+                <h3>Custom Marble & Sandstone Temples</h3>
+                <p>Hand-carved traditional Mandirs and large-scale architectural temples designed with supreme detailing.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="cladding1.jpg" alt="CNC Stone Cladding" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80'">
+            <div class="card-body">
+                <h3>3D CNC Stone Wall Cladding</h3>
+                <p>Bespoke textured stone wall panels and luxury marble murals engineered for interior and exterior facades.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="fountain1.jpg" alt="Stone Fountain Design" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80'">
+            <div class="card-body">
+                <h3>Architectural Stone Fountains</h3>
+                <p>Custom carved stone water features and garden sculptures built for luxury residences and hotels.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="stone_artifact1.jpg" alt="Stone Artifact" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80'">
+            <div class="card-body">
+                <h3>Custom Stone Jali & Pillars</h3>
+                <p>Intricate CNC carved stone screens, decorative pillars, and stone arches for heritage aesthetics.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Action -->
+    <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Shri Shyam Stone Arts. Engineered for Architectural Excellence.</p>
+    </footer>
 
 </body>
 </html>
