@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shri Shyam Stone Arts | Modern Architectural & Stone Crafts</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
+    <title>Jay Shri Shyam Stone Arts | Luxury Architectural & Sculptural Stone Works</title>
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-main: #0B0F17;
-            --bg-card: rgba(23, 31, 46, 0.75);
-            --primary-glow: #3B82F6;
-            --accent: #60A5FA;
-            --text-main: #F8FAFC;
-            --text-muted: #94A3B8;
-            --border-glow: rgba(255, 255, 255, 0.12);
+            --primary-dark: #0b1120;
+            --card-dark: #1e293b;
+            --primary-gold: #d97706;
+            --gold-hover: #b45309;
+            --accent-glow: #fbbf24;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
         }
 
         * {
@@ -28,369 +31,598 @@
         }
 
         body {
-            background-color: var(--bg-main);
+            background-color: var(--bg-light);
             color: var(--text-main);
-            overflow-x: hidden;
             line-height: 1.6;
         }
 
-        /* Glassmorphism Navbar */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 18px 8%;
+        /* Top Header Bar */
+        .top-bar {
+            background: var(--primary-dark);
+            color: #94a3b8;
+            padding: 10px 5%;
+            font-size: 0.85rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(11, 15, 23, 0.88);
-            backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .top-bar-info span {
+            margin-right: 20px;
+        }
+
+        .top-bar-info i {
+            color: var(--primary-gold);
+            margin-right: 6px;
+        }
+
+        /* Navbar */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 25px rgba(0,0,0,0.06);
             z-index: 1000;
-            border-bottom: 1px solid var(--border-glow);
+            padding: 16px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
+            font-family: 'Cinzel', serif;
+            font-size: 1.6rem;
             font-weight: 700;
-            background: linear-gradient(90deg, #FFFFFF, var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: -0.5px;
+            color: var(--primary-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: 0.5px;
         }
 
-        .btn-primary {
-            background: linear-gradient(135deg, #2563EB, #3B82F6);
-            color: #fff;
-            padding: 12px 28px;
-            border-radius: 50px;
+        .logo i {
+            color: var(--primary-gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
             text-decoration: none;
+            color: var(--text-main);
             font-weight: 600;
             font-size: 0.95rem;
-            box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
-            transition: all 0.3s ease;
-            display: inline-block;
+            transition: color 0.3s;
         }
 
-        .btn-primary:hover {
+        .nav-links a:hover {
+            color: var(--primary-gold);
+        }
+
+        .btn-header {
+            background: linear-gradient(135deg, #d97706, #b45309);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(217, 119, 6, 0.35);
+            transition: all 0.3s;
+        }
+
+        .btn-header:hover {
             transform: translateY(-2px);
-            box-shadow: 0 0 30px rgba(59, 130, 246, 0.7);
+            box-shadow: 0 6px 20px rgba(217, 119, 6, 0.45);
         }
 
         /* Hero Section */
         .hero {
-            min-height: 90vh;
+            background: linear-gradient(rgba(11, 17, 32, 0.85), rgba(11, 17, 32, 0.9)), url('work1.jpg.jpg') center/cover no-repeat;
+            min-height: 85vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 140px 20px 60px;
-            position: relative;
-            background: radial-gradient(circle at 50% 20%, rgba(37, 99, 235, 0.18), transparent 60%);
+            color: white;
+            padding: 80px 20px;
         }
 
-        .badge {
-            background: rgba(59, 130, 246, 0.12);
-            color: var(--accent);
-            border: 1px solid rgba(59, 130, 246, 0.35);
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            background: rgba(217, 119, 6, 0.15);
+            border: 1px solid var(--primary-gold);
+            color: var(--accent-glow);
             padding: 8px 20px;
-            border-radius: 30px;
+            border-radius: 50px;
             font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 25px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
             display: inline-block;
+            margin-bottom: 25px;
         }
 
         .hero h1 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2.4rem, 6vw, 4.2rem);
-            font-weight: 700;
-            line-height: 1.15;
+            font-family: 'Cinzel', serif;
+            font-size: 3.2rem;
+            line-height: 1.25;
             margin-bottom: 20px;
-            letter-spacing: -1px;
-        }
-
-        .hero h1 span {
-            background: linear-gradient(90deg, #60A5FA, #A78BFA);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-weight: 700;
         }
 
         .hero p {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            max-width: 680px;
-            margin: 0 auto 35px;
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            margin-bottom: 35px;
+            max-width: 780px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        /* Stats Grid */
-        .stats {
+        .hero-btns {
             display: flex;
+            gap: 15px;
             justify-content: center;
-            gap: 40px;
-            margin-top: 40px;
             flex-wrap: wrap;
         }
 
-        .stat-item h3 {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: #fff;
-        }
-
-        .stat-item p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        /* Section Titles */
-        .section-title {
-            text-align: center;
-            padding: 70px 20px 35px;
-        }
-
-        .section-title h2 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.3rem;
-            margin-bottom: 8px;
-        }
-
-        /* Portfolio Cards Grid */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-            gap: 25px;
-            padding: 0 8% 60px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-glow);
-            border-radius: 20px;
-            overflow: hidden;
-            backdrop-filter: blur(12px);
-            transition: all 0.4s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(96, 165, 250, 0.45);
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
-        }
-
-        .card-img {
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-            border-bottom: 1px solid var(--border-glow);
-        }
-
-        .card-body {
-            padding: 22px;
-        }
-
-        .card-body h3 {
-            font-size: 1.25rem;
-            margin-bottom: 8px;
-            font-weight: 700;
-        }
-
-        .card-body p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        /* Leadership / CEO Section */
-        .team-grid {
-            display: flex;
-            justify-content: center;
-            gap: 35px;
-            flex-wrap: wrap;
-            padding: 0 8% 80px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .team-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-glow);
-            border-radius: 22px;
-            padding: 35px 25px;
-            text-align: center;
-            width: 320px;
-            backdrop-filter: blur(12px);
-            transition: all 0.3s ease;
-        }
-
-        .team-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-6px);
-        }
-
-        .team-img {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 20px;
-            border: 3px solid var(--accent);
-            box-shadow: 0 0 20px rgba(96, 165, 250, 0.35);
-        }
-
-        .team-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 5px;
-        }
-
-        .team-card .role {
-            color: var(--accent);
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .team-card p {
-            color: var(--text-muted);
-            font-size: 0.88rem;
-        }
-
-        /* Floating WhatsApp Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25D366;
+        .btn-primary {
+            background: var(--primary-gold);
             color: white;
-            width: 62px;
-            height: 62px;
-            border-radius: 50%;
+            padding: 15px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-hover);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.08);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: 15px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            backdrop-filter: blur(6px);
+            transition: 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        /* Section Styling */
+        .section-padding {
+            padding: 90px 5%;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 60px auto;
+        }
+
+        .section-header h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.3rem;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        .divider {
+            width: 70px;
+            height: 3px;
+            background: var(--primary-gold);
+            margin: 16px auto;
+        }
+
+        /* Leadership Section */
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 35px;
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+        .leader-card {
+            background: var(--card-bg);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .leader-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 22px 45px rgba(0,0,0,0.12);
+        }
+
+        .leader-img-box {
+            position: relative;
+            height: 340px;
+            background-color: #cbd5e1;
+        }
+
+        .leader-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .leader-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary-dark);
+            color: var(--primary-gold);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .leader-info {
+            padding: 28px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .leader-info h3 {
+            font-size: 1.45rem;
+            color: var(--primary-dark);
+            margin-bottom: 4px;
+        }
+
+        .leader-role {
+            color: var(--primary-gold);
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .leader-qualifications {
+            margin-bottom: 22px;
+            list-style: none;
+        }
+
+        .leader-qualifications li {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .leader-qualifications li i {
+            color: var(--primary-gold);
+            margin-top: 4px;
+            font-size: 0.85rem;
+        }
+
+        .contact-btn-group {
+            margin-top: auto;
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-call {
+            flex: 1;
+            background: #f1f5f9;
+            color: var(--primary-dark);
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .btn-call:hover {
+            background: #e2e8f0;
+        }
+
+        .btn-wa {
+            flex: 1;
+            background: #25d366;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            font-size: 0.9rem;
+            transition: 0.3s;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45);
-            z-index: 1000;
-            text-decoration: none;
-            transition: all 0.3s ease;
+            gap: 8px;
         }
 
-        .whatsapp-float:hover {
+        .btn-wa:hover {
+            background: #1eb956;
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 14px;
+            overflow: hidden;
+            height: 280px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+            background: #e2e8f0;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .gallery-item:hover img {
             transform: scale(1.1);
         }
 
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(11, 17, 32, 0.9), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 22px;
+            color: white;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .gallery-overlay p {
+            font-size: 0.8rem;
+            color: var(--accent-glow);
+            font-weight: 600;
+        }
+
+        /* Order / Inquiry Section */
+        .order-section {
+            background: var(--primary-dark);
+            color: white;
+            border-radius: 24px;
+            padding: 60px 50px;
+            margin: 60px 5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .order-content h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.3rem;
+            margin-bottom: 18px;
+            color: #fff;
+        }
+
+        .order-content p {
+            color: #94a3b8;
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+
+        .order-form input, .order-form select, .order-form textarea {
+            width: 100%;
+            padding: 14px 18px;
+            margin-bottom: 18px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            background: #1e293b;
+            color: white;
+            outline: none;
+            font-size: 0.95rem;
+        }
+
+        .order-form input:focus, .order-form textarea:focus, .order-form select:focus {
+            border-color: var(--primary-gold);
+        }
+
+        .order-form button {
+            width: 100%;
+            background: linear-gradient(135deg, #d97706, #b45309);
+            color: white;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .order-form button:hover {
+            opacity: 0.95;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
         footer {
+            background: #060911;
+            color: #64748b;
+            padding: 45px 5% 25px 5%;
             text-align: center;
-            padding: 40px 20px;
-            border-top: 1px solid var(--border-glow);
-            color: var(--text-muted);
+            border-top: 1px solid #1e293b;
+        }
+
+        footer p {
             font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.3rem; }
+            .order-section { grid-template-columns: 1fr; padding: 35px 25px; }
+            .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <div class="top-bar-info">
+            <span><i class="fa-solid fa-location-dot"></i> PP Compound, Ranchi, Jharkhand</span>
+            <span><i class="fa-solid fa-phone"></i> +91 6375161370 | +91 7014467721</span>
+        </div>
+        <div>
+            <span><i class="fa-solid fa-crown"></i> 15+ Years Legacy of Master Stonework</span>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
     <nav>
-        <div class="logo">Shri Shyam Stone Arts</div>
-        <a href="https://wa.me/91XXXXXXXXXX" class="btn-primary"><i class="fa-brands fa-whatsapp"></i> Direct Connect</a>
+        <a href="#" class="logo">
+            <i class="fa-solid fa-gopuram"></i> Jay Shri Shyam Stone Arts
+        </a>
+        <ul class="nav-links">
+            <li><a href="#leadership">Leadership</a></li>
+            <li><a href="#gallery">Masterwork Portfolio</a></li>
+            <li><a href="#order">Direct Order</a></li>
+        </ul>
+        <a href="#order" class="btn-header">Get Luxury Quote</a>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div>
-            <span class="badge">✨ Premium Stone Architecture & CNC Artistry</span>
-            <h1>Crafting Timeless <span>Stone Luxury</span> & Architectural Excellence</h1>
-            <p>Master stone artisans producing high-precision marble temples, CNC 3D stone wall panels, luxury fountains, and bespoke stone artifacts.</p>
-            <a href="https://wa.me/91XXXXXXXXXX" class="btn-primary" style="padding: 16px 36px; font-size: 1.05rem;">Explore Portfolio <i class="fa-solid fa-arrow-right"></i></a>
-
-            <div class="stats">
-                <div class="stat-item">
-                    <h3>500+</h3>
-                    <p>Projects Completed</p>
-                </div>
-                <div class="stat-item">
-                    <h3>100%</h3>
-                    <p>Handcrafted & Precision CNC</p>
-                </div>
-                <div class="stat-item">
-                    <h3>4.9 ★</h3>
-                    <p>Client Satisfaction</p>
-                </div>
+        <div class="hero-content">
+            <span class="hero-badge">15+ Years Master Artistry & Modern Engineering</span>
+            <h1>Carving Architectural Grandeur & Timeless Stone Art</h1>
+            <p>Under the master craftsmanship of CEO Dinesh Saini and modern technical leadership of Director Sameer Saini, we construct world-class temples, carved statues, and sandstone marvels.</p>
+            <div class="hero-btns">
+                <a href="https://wa.me/916375161370?text=Hello%20CEO%20Dinesh%20Saini%20Ji,%20I%20want%20to%20discuss%20a%20stone%20artwork%20project." class="btn-primary" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Chat with CEO (Dinesh Saini)
+                </a>
+                <a href="#gallery" class="btn-secondary">
+                    <i class="fa-solid fa-images"></i> View Master Projects (15 Photos)
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Leadership Section -->
-    <div class="section-title">
-        <h2>Leadership & Visionaries</h2>
-        <p style="color: var(--text-muted);">The driving minds behind Shri Shyam Stone Arts.</p>
-    </div>
+    <section class="section-padding" id="leadership">
+        <div class="section-header">
+            <h2>Visionary Leadership & Technical Mastery</h2>
+            <div class="divider"></div>
+            <p>Combining 15+ years of hands-on stone carving experience with high-tech modern engineering.</p>
+        </div>
 
-    <section class="team-grid">
-        <div class="team-card">
-            <img src="ceo.jpg" alt="CEO Director" class="team-img" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80'">
-            <h3>Managing Director</h3>
-            <div class="role">Chief Executive Officer</div>
-            <p>Leading structural stone innovations and high-end architectural carving projects across India.</p>
-        </div>
-        <div class="team-card">
-            <img src="director.jpg" alt="Co-Director" class="team-img" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80'">
-            <h3>Co-Director</h3>
-            <div class="role">Head of Operations & Design</div>
-            <p>Specializing in 3D CNC stone mapping, client customization, and luxury interior stone cladding.</p>
-        </div>
-    </section>
+        <div class="leadership-grid">
+            <!-- CEO Card: Dinesh Saini -->
+            <div class="leader-card">
+                <div class="leader-img-box">
+                    <img src="ceo.jpg.jpg" alt="CEO Dinesh Saini" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80'">
+                    <span class="leader-badge">CEO & Master Craftsman</span>
+                </div>
+                <div class="leader-info">
+                    <h3>Dinesh Saini</h3>
+                    <div class="leader-role">Chief Executive Officer</div>
+                    <ul class="leader-qualifications">
+                        <li><i class="fa-solid fa-award"></i> <strong>15+ Years Industry Experience:</strong> Mastermind behind all flagship architectural & temple stone projects.</li>
+                        <li><i class="fa-solid fa-hammer"></i> <strong>Portfolio Creator:</strong> All 15 featured signature stone works are crafted under his personal supervision.</li>
+                        <li><i class="fa-solid fa-building-columns"></i> Specialist in Grand Sculptures, Intricate Mandir Architecture & Historic Stone Carving.</li>
+                    </ul>
+                    <div class="contact-btn-group">
+                        <a href="tel:6375161370" class="btn-call"><i class="fa-solid fa-phone"></i> Call CEO</a>
+                        <a href="https://wa.me/916375161370?text=Hello%20Dinesh%20Ji,%20I%20want%20to%20discuss%20a%20project." class="btn-wa" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Portfolio Projects Grid -->
-    <div class="section-title">
-        <h2>Our Architectural Portfolio</h2>
-        <p style="color: var(--text-muted);">Real handcrafted stone marvels & high-end architectural designs.</p>
-    </div>
-
-    <section class="grid">
-        <div class="card">
-            <img src="temple1.jpg" alt="Stone Temple Work" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80'">
-            <div class="card-body">
-                <h3>Custom Marble & Sandstone Temples</h3>
-                <p>Hand-carved traditional Mandirs and large-scale architectural temples designed with supreme detailing.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="cladding1.jpg" alt="CNC Stone Cladding" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80'">
-            <div class="card-body">
-                <h3>3D CNC Stone Wall Cladding</h3>
-                <p>Bespoke textured stone wall panels and luxury marble murals engineered for interior and exterior facades.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="fountain1.jpg" alt="Stone Fountain Design" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80'">
-            <div class="card-body">
-                <h3>Architectural Stone Fountains</h3>
-                <p>Custom carved stone water features and garden sculptures built for luxury residences and hotels.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="stone_artifact1.jpg" alt="Stone Artifact" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80'">
-            <div class="card-body">
-                <h3>Custom Stone Jali & Pillars</h3>
-                <p>Intricate CNC carved stone screens, decorative pillars, and stone arches for heritage aesthetics.</p>
+            <!-- Director Card: Sameer Saini -->
+            <div class="leader-card">
+                <div class="leader-img-box">
+                    <img src="director.jpg.jpg" alt="Director Sameer Saini" onerror="this.src='https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80'">
+                    <span class="leader-badge">Executive Director & Tech Lead</span>
+                </div>
+                <div class="leader-info">
+                    <h3>Sameer Saini</h3>
+                    <div class="leader-role">Director of Operations & Tech</div>
+                    <ul class="leader-qualifications">
+                        <li><i class="fa-solid fa-graduation-cap"></i> <strong>IIT B.Tech (Noida) Alumni:</strong> Advanced Tech Vision & Structural Engineering.</li>
+                        <li><i class="fa-solid fa-certificate"></i> <strong>Polytechnic Degree from Jaipur:</strong> Core expertise in Civil Architecture & Design.</li>
+                        <li><i class="fa-solid fa-code"></i> <strong>Advanced Coding & Software Skills:</strong> Digital 3D Modeling, Tech Automation & Operations.</li>
+                    </ul>
+                    <div class="contact-btn-group">
+                        <a href="tel:7014467721" class="btn-call"><i class="fa-solid fa-phone"></i> Call Director</a>
+                        <a href="https://wa.me/917014467721?text=Hello%20Sameer%20Ji,%20I%20want%20to%20inquire%20about%20a%20project." class="btn-wa" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Floating Action -->
-    <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+    <!-- Work Portfolio Gallery Section -->
+    <section class="section-padding" id="gallery" style="background-color: #f1f5f9;">
+        <div class="section-header">
+            <h2>Masterworks Executed by CEO Dinesh Saini</h2>
+            <div class="divider"></div>
+            <p>Every piece below reflects 15+ years of pure craftsmanship, precision hand-carving, and architectural excellence.</p>
+        </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 Shri Shyam Stone Arts. Engineered for Architectural Excellence.</p>
-    </footer>
-
-</body>
-</html>
+        <div class="gallery-grid">
+            <!-- 15 Dynamic Work Photos -->
+            <script>
+                for(let i = 1; i 
